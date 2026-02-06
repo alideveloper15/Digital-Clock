@@ -3,10 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Clock</title>
+  <title>Digital Clock</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="js-container"></div>
+  <div class="js-container">
+  </div>
     <script src="https://unpkg.com/supersimpledev@8.6.4/dayjs.js"></script>
 
     <script src="https://unpkg.com/supersimpledev/react.js"></script>
@@ -17,10 +19,17 @@
 
       function Clock(){
         const time = dayjs().format('HH:mm:ss')
+        // const day = dayjs().format('DD/MM/YYYY')
+        // const weekDay = dayjs().format('dddd')
+        // const timeState = time >=12 ? pm : am
         console.log(time)
 
         return(
-          <p>{time}</p>
+          <>
+            <p>{time}</p>
+            // <p>{day}</p>
+            // <p>{weekDay}</p>
+          </>
         )
       }
       
